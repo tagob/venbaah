@@ -1,0 +1,367 @@
+@@ .. @@
+ .btn-outline:hover {
+   background: var(--primary-color);
+   color: white;
+ }
++
++/* Navigation button */
++.btn-nav {
++  display: inline-block;
++  padding: 0.5rem 1rem;
++  background: var(--accent-color);
++  color: white;
++  text-decoration: none;
++  border-radius: 20px;
++  font-weight: 500;
++  font-size: 0.9rem;
++  transition: all 0.3s ease;
++  border: 2px solid var(--accent-color);
++}
++
++.btn-nav:hover {
++  background: var(--primary-color);
++  border-color: var(--primary-color);
++  transform: translateY(-2px);
++}
++
++/* Flash Messages */
++.flash-messages {
++  position: fixed;
++  top: 80px;
++  right: 20px;
++  z-index: 1001;
++  max-width: 400px;
++}
++
++.flash-message {
++  padding: 1rem 1.5rem;
++  margin-bottom: 0.5rem;
++  border-radius: 8px;
++  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
++  position: relative;
++  animation: slideIn 0.3s ease;
++}
++
++.flash-success {
++  background: #d4edda;
++  color: #155724;
++  border-left: 4px solid #28a745;
++}
++
++.flash-error {
++  background: #f8d7da;
++  color: #721c24;
++  border-left: 4px solid #dc3545;
++}
++
++.flash-message button {
++  position: absolute;
++  top: 0.5rem;
++  right: 0.5rem;
++  background: none;
++  border: none;
++  font-size: 1.2rem;
++  cursor: pointer;
++  color: inherit;
++  opacity: 0.7;
++}
++
++.flash-message button:hover {
++  opacity: 1;
++}
++
++@keyframes slideIn {
++  from {
++    transform: translateX(100%);
++    opacity: 0;
++  }
++  to {
++    transform: translateX(0);
++    opacity: 1;
++  }
++}
++
++/* Form Styles */
++.contact-form-container {
++  max-width: 600px;
++  margin: 0 auto;
++  background: white;
++  padding: 2rem;
++  border-radius: 15px;
++  box-shadow: 0 8px 25px var(--shadow);
++}
++
++.contact-form {
++  display: flex;
++  flex-direction: column;
++  gap: 1.5rem;
++}
++
++.form-group {
++  display: flex;
++  flex-direction: column;
++}
++
++.form-label {
++  font-weight: 600;
++  margin-bottom: 0.5rem;
++  color: var(--primary-color);
++  font-size: 1rem;
++}
++
++.form-input, .form-textarea, .form-file {
++  padding: 0.8rem;
++  border: 2px solid rgba(139, 69, 19, 0.2);
++  border-radius: 8px;
++  font-size: 1rem;
++  font-family: inherit;
++  transition: all 0.3s ease;
++  background: rgba(255, 248, 220, 0.3);
++}
++
++.form-input:focus, .form-textarea:focus, .form-file:focus {
++  outline: none;
++  border-color: var(--primary-color);
++  background: white;
++  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
++}
++
++.form-textarea {
++  min-height: 120px;
++  resize: vertical;
++}
++
++.form-file {
++  padding: 0.5rem;
++}
++
++.btn-submit {
++  align-self: flex-start;
++  min-width: 150px;
++}
++
++.form-errors {
++  margin-top: 0.5rem;
++}
++
++.error {
++  color: #dc3545;
++  font-size: 0.9rem;
++  display: block;
++  margin-bottom: 0.25rem;
++}
++
++/* Book Actions */
++.book-actions {
++  display: flex;
++  gap: 0.5rem;
++  flex-wrap: wrap;
++  justify-content: center;
++}
++
++.book-actions .btn {
++  flex: 1;
++  min-width: 100px;
++  text-align: center;
++  font-size: 0.9rem;
++  padding: 0.6rem 1rem;
++}
++
++.book-date {
++  font-size: 0.85rem;
++  color: var(--text-secondary);
++  font-style: italic;
++  margin-bottom: 1rem;
++}
++
++/* Editorial Board Styles */
++.editorial-grid {
++  display: grid;
++  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
++  gap: 2rem;
++  margin-top: 2rem;
++}
++
++.editorial-card {
++  background: white;
++  border-radius: 15px;
++  padding: 2rem;
++  text-align: center;
++  box-shadow: 0 8px 25px var(--shadow);
++  transition: all 0.3s ease;
++  border: 1px solid rgba(139, 69, 19, 0.1);
++}
++
++.editorial-card:hover {
++  transform: translateY(-5px);
++  box-shadow: 0 15px 40px rgba(139, 69, 19, 0.2);
++}
++
++.editorial-photo {
++  width: 80px;
++  height: 80px;
++  background: var(--gradient);
++  border-radius: 50%;
++  margin: 0 auto 1rem;
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  font-size: 2rem;
++  box-shadow: 0 4px 15px var(--shadow);
++}
++
++.editorial-card h3 {
++  color: var(--primary-color);
++  margin-bottom: 0.5rem;
++  font-size: 1.3rem;
++}
++
++.editorial-title {
++  color: var(--secondary-color);
++  font-weight: 600;
++  margin-bottom: 1rem;
++  font-size: 1rem;
++}
++
++.editorial-bio {
++  color: var(--text-secondary);
++  line-height: 1.6;
++  margin-bottom: 1rem;
++  font-size: 0.95rem;
++}
++
++.editorial-contact {
++  color: var(--accent-color);
++  font-weight: 500;
++  font-size: 0.9rem;
++}
++
++/* Contact Info Styles */
++.contact-info {
++  background: rgba(139, 69, 19, 0.05);
++  padding: 1.5rem;
++  border-radius: 10px;
++  margin-top: 2rem;
++  border-left: 4px solid var(--accent-color);
++}
++
++.contact-info h4 {
++  color: var(--primary-color);
++  margin-bottom: 1rem;
++}
++
++.contact-info p {
++  margin-bottom: 0.5rem;
++  color: var(--text-secondary);
++}
++
++/* Upload Guidelines */
++.upload-guidelines {
++  background: rgba(139, 69, 19, 0.05);
++  padding: 1.5rem;
++  border-radius: 10px;
++  margin-top: 2rem;
++  border-left: 4px solid var(--accent-color);
++}
++
++.upload-guidelines h4 {
++  color: var(--primary-color);
++  margin-bottom: 1rem;
++}
++
++.upload-guidelines ul {
++  margin-left: 1.5rem;
++  color: var(--text-secondary);
++}
++
++.upload-guidelines li {
++  margin-bottom: 0.5rem;
++  line-height: 1.6;
++}
++
++/* Policies Content */
++.policies-content {
++  max-width: 800px;
++  margin: 0 auto;
++  background: white;
++  padding: 3rem;
++  border-radius: 15px;
++  box-shadow: 0 8px 25px var(--shadow);
++}
++
++.policies-content h2 {
++  color: var(--primary-color);
++  text-align: center;
++  margin-bottom: 2rem;
++  font-size: 2rem;
++}
++
++.policies-content h3 {
++  color: var(--primary-color);
++  margin-top: 2rem;
++  margin-bottom: 1rem;
++  font-size: 1.3rem;
++}
++
++.policies-content ul {
++  margin-left: 2rem;
++  margin-bottom: 1.5rem;
++}
++
++.policies-content li {
++  margin-bottom: 0.5rem;
++  line-height: 1.7;
++  color: var(--text-secondary);
++}
++
++.policies-content p {
++  color: var(--text-secondary);
++  line-height: 1.7;
++  margin-bottom: 1.5rem;
++}
+ 
+ /* Responsive Design */
+ @media (max-width: 768px) {
+@@ .. @@
+   .quick-links {
+     grid-template-columns: 1fr;
+   }
++  
++  .editorial-grid {
++    grid-template-columns: 1fr;
++  }
++  
++  .book-actions {
++    flex-direction: column;
++  }
++  
++  .book-actions .btn {
++    flex: none;
++  }
++  
++  .flash-messages {
++    right: 10px;
++    left: 10px;
++    max-width: none;
++  }
++  
++  .contact-form-container, .policies-content {
++    padding: 1.5rem;
++  }
+ 
+   .section {
+     padding: 2rem 1rem;
+@@ .. @@
+   .book-cover {
+     width: 120px;
+     height: 160px;
+   }
++  
++  .editorial-grid {
++    grid-template-columns: 1fr;
++  }
++  
++  .contact-form-container, .policies-content {
++    padding: 1rem;
++  }
+ }

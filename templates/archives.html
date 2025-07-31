@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Archives - Venbaah{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="about">
+        <h1 class="section-title">Archives</h1>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Published Works</h3>
+                <p>Explore our collection of published research articles, literary works, and scholarly contributions to Tamil literature and language studies.</p>
+                
+                {% if books %}
+                    <p>We currently have <strong>{{ books|length }}</strong> publications in our archives.</p>
+                {% else %}
+                    <p>Our archives are growing. Check back soon for new publications!</p>
+                {% endif %}
+            </div>
+            <div class="about-image">
+                <div class="book-cover">📚</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if books %}
+<section class="section">
+    <div class="featured-books">
+        <h2 class="section-title">All Publications</h2>
+        <div class="books-grid">
+            {% for book in books %}
+            <div class="book-card">
+                <div class="book-cover">📖</div>
+                <h3 class="book-title">{{ book[1] }}</h3>
+                <p class="book-author">{{ book[2] }}</p>
+                <p class="book-description">{{ book[3] or 'A valuable contribution to Tamil literary studies.' }}</p>
+                <p class="book-date">Published: {{ book[6][:10] if book[6] else 'Recently' }}</p>
+                <div class="book-actions">
+                    <a href="{{ url_for('view_file', filename=book[4]) }}" class="btn" target="_blank">View PDF</a>
+                    <a href="{{ url_for('download_file', filename=book[4]) }}" class="btn btn-outline">Download</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% else %}
+<section class="section">
+    <div class="featured-books">
+        <h2 class="section-title">Coming Soon</h2>
+        <div class="about-text text-center">
+            <p>Our archives are being prepared. We will soon have a rich collection of Tamil literary works and research papers available for download.</p>
+            <a href="{{ url_for('upload_book') }}" class="btn">Upload a Book</a>
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}

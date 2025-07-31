@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <img src="{{ url_for('static', filename='images/banner.png') }}" alt="Venbaah Literary Journal Banner" class="hero-banner fade-in">
+        <h1 class="fade-in tamil-text">வெண்பா இலக்கிய ஆய்விதழ்</h1>
+        <p class="hero-subtitle fade-in">International Journal of Tamil Language and Literary Studies</p>
+        <div class="fade-in">
+            <a href="{{ url_for('manuscript') }}" class="btn">Submit Manuscript</a>
+            <a href="{{ url_for('archives') }}" class="btn btn-outline">Browse Archives</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section">
+    <div class="about slide-in-left">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>அனைவருக்கும் வணக்கம்</h2>
+                <p class="tamil-text">தமிழ்மொழி செம்மொழி ஆகும். தமிழ் மொழியின் தோற்றம் இயற்கையில் பிறந்ததேயாம். அதன் அளப்பரிய தாக்கம் உலகத்தின் பல்வேறு மொழிகளிலும் காணப்படுகின்றது.</p>
+                
+                <h3>About Venbaah</h3>
+                <p>Venbaah is a prestigious international journal dedicated to Tamil language and literary studies. We publish high-quality research articles, critical essays, and scholarly works that contribute to the understanding and preservation of Tamil literature and culture.</p>
+                
+                <p>Our mission is to provide a platform for scholars, researchers, and literature enthusiasts to share their insights and contribute to the rich tapestry of Tamil literary scholarship.</p>
+            </div>
+            <div class="about-image">
+                <div class="book-cover">
+                    📚
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Books Section -->
+<section class="section">
+    <div class="featured-books slide-in-right">
+        <h2 class="section-title">Featured Publications</h2>
+        <div class="books-grid">
+            {% if featured_books %}
+                {% for book in featured_books %}
+                <div class="book-card">
+                    <div class="book-cover">📖</div>
+                    <h3 class="book-title">{{ book[1] }}</h3>
+                    <p class="book-author">{{ book[2] }}</p>
+                    <p class="book-description">{{ book[3] or 'A valuable contribution to Tamil literary studies.' }}</p>
+                    <div class="book-actions">
+                        <a href="{{ url_for('view_file', filename=book[4]) }}" class="btn" target="_blank">View PDF</a>
+                        <a href="{{ url_for('download_file', filename=book[4]) }}" class="btn btn-outline">Download</a>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="book-card">
+                    <div class="book-cover">📖</div>
+                    <h3 class="book-title">Tamil Literary Heritage</h3>
+                    <p class="book-author">Dr. Maheswari Krishnan</p>
+                    <p class="book-description">A comprehensive study of classical Tamil literature and its influence on modern literary movements.</p>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">📜</div>
+                    <h3 class="book-title">Contemporary Tamil Poetry</h3>
+                    <p class="book-author">Various Authors</p>
+                    <p class="book-description">An anthology of modern Tamil poetry showcasing diverse voices and themes from contemporary writers.</p>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">🎭</div>
+                    <h3 class="book-title">Sangam Literature Analysis</h3>
+                    <p class="book-author">Editorial Board</p>
+                    <p class="book-description">Critical analysis and interpretation of Sangam period literature with modern scholarly perspectives.</p>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Quick Links Section -->
+<section class="section">
+    <h2 class="section-title">Explore Venbaah</h2>
+    <div class="quick-links">
+        <div class="link-card fade-in">
+            <div class="link-card-icon">📝</div>
+            <h3>Submit Your Work</h3>
+            <p>Share your research and literary contributions with our global community of Tamil literature enthusiasts.</p>
+            <a href="{{ url_for('manuscript') }}" class="btn">Submission Guidelines</a>
+        </div>
+        
+        <div class="link-card fade-in">
+            <div class="link-card-icon">📚</div>
+            <h3>Browse Archives</h3>
+            <p>Explore our extensive collection of published articles, research papers, and literary works.</p>
+            <a href="{{ url_for('archives') }}" class="btn">View Archives</a>
+        </div>
+        
+        <div class="link-card fade-in">
+            <div class="link-card-icon">👥</div>
+            <h3>Editorial Board</h3>
+            <p>Meet our distinguished panel of editors and reviewers who maintain our publication standards.</p>
+            <a href="{{ url_for('editorial') }}" class="btn">Meet the Team</a>
+        </div>
+        
+        <div class="link-card fade-in">
+            <div class="link-card-icon">📋</div>
+            <h3>Policies</h3>
+            <p>Learn about our publication policies, peer review process, and ethical guidelines.</p>
+            <a href="{{ url_for('policies') }}" class="btn">Read Policies</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

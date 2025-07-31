@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}Editorial Board - Venbaah{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="about">
+        <h1 class="section-title">Editorial Board</h1>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Our Distinguished Panel</h3>
+                <p>Meet our editorial board members who bring decades of experience in Tamil literature, linguistics, and scholarly research. They ensure the highest standards of academic excellence in all our publications.</p>
+            </div>
+            <div class="about-image">
+                <div class="book-cover">👥</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="featured-books">
+        <h2 class="section-title">Board Members</h2>
+        <div class="editorial-grid">
+            <div class="editorial-card">
+                <div class="editorial-photo">👩‍🏫</div>
+                <h3>Dr. Maheswari Krishnan</h3>
+                <p class="editorial-title">Editor-in-Chief</p>
+                <p class="editorial-bio">Renowned scholar in Tamil literature with over 20 years of research experience. Specializes in classical Tamil poetry and modern literary criticism.</p>
+                <p class="editorial-contact">maheswari@ijtlls.com</p>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-photo">👨‍🏫</div>
+                <h3>Dr. Rajesh Kumar</h3>
+                <p class="editorial-title">Associate Editor</p>
+                <p class="editorial-bio">Expert in Tamil linguistics and comparative literature. Published extensively on Sangam literature and its contemporary relevance.</p>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-photo">👩‍🏫</div>
+                <h3>Dr. Priya Selvam</h3>
+                <p class="editorial-title">Review Editor</p>
+                <p class="editorial-bio">Specialist in modern Tamil poetry and feminist literary criticism. Active researcher in contemporary Tamil women writers.</p>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-photo">👨‍🏫</div>
+                <h3>Dr. Murugan Pillai</h3>
+                <p class="editorial-title">Advisory Board</p>
+                <p class="editorial-bio">Distinguished professor emeritus with expertise in Tamil grammar and ancient literature. Author of several acclaimed books on Tamil prosody.</p>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-photo">👩‍🏫</div>
+                <h3>Dr. Kamala Devi</h3>
+                <p class="editorial-title">International Editor</p>
+                <p class="editorial-bio">Leading researcher in Tamil diaspora literature. Focuses on Tamil literary traditions in Southeast Asia and their evolution.</p>
+            </div>
+            
+            <div class="editorial-card">
+                <div class="editorial-photo">👨‍🏫</div>
+                <h3>Dr. Arjun Natarajan</h3>
+                <p class="editorial-title">Technical Editor</p>
+                <p class="editorial-bio">Expert in digital humanities and Tamil computational linguistics. Pioneering work in Tamil text analysis and digital archiving.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="about">
+        <div class="about-text">
+            <h3>Join Our Editorial Team</h3>
+            <p>We are always looking for qualified scholars and researchers to join our editorial board. If you have expertise in Tamil literature, linguistics, or related fields, we welcome your contribution to our mission.</p>
+            
+            <h4>Requirements:</h4>
+            <ul>
+                <li>PhD in Tamil Literature, Linguistics, or related field</li>
+                <li>Minimum 5 years of research experience</li>
+                <li>Published works in peer-reviewed journals</li>
+                <li>Commitment to scholarly excellence and ethical publishing</li>
+            </ul>
+            
+            <div class="text-center mt-3">
+                <a href="{{ url_for('contact') }}" class="btn">Express Interest</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

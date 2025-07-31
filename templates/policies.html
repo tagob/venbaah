@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Policies - Venbaah{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="about">
+        <h1 class="section-title">Publication Policies</h1>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Our Commitment</h3>
+                <p>Venbaah is committed to maintaining the highest standards of scholarly publishing and ethical practices in Tamil literary research.</p>
+            </div>
+            <div class="about-image">
+                <div class="book-cover">📋</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="featured-books">
+        <div class="policies-content">
+            <h2>Editorial Policies</h2>
+            
+            <h3>Peer Review Process</h3>
+            <p>All submissions undergo a rigorous double-blind peer review process. Each manuscript is evaluated by at least two independent reviewers who are experts in the relevant field.</p>
+            
+            <h3>Publication Ethics</h3>
+            <ul>
+                <li>All submissions must be original work not previously published</li>
+                <li>Proper attribution and citation of sources is mandatory</li>
+                <li>Plagiarism in any form will result in immediate rejection</li>
+                <li>Authors must disclose any conflicts of interest</li>
+                <li>Research involving human subjects must have appropriate ethical approval</li>
+            </ul>
+            
+            <h3>Open Access Policy</h3>
+            <p>Venbaah is an open access journal. All published articles are freely available to readers worldwide without subscription fees. Authors retain copyright of their work under Creative Commons licensing.</p>
+            
+            <h3>Copyright and Licensing</h3>
+            <p>Authors retain copyright of their published work. All articles are published under Creative Commons Attribution 4.0 International License, allowing for sharing and adaptation with proper attribution.</p>
+            
+            <h3>Retraction Policy</h3>
+            <p>Articles may be retracted if:</p>
+            <ul>
+                <li>Significant errors are discovered that invalidate the conclusions</li>
+                <li>Plagiarism or data fabrication is identified</li>
+                <li>Ethical violations are confirmed</li>
+                <li>Legal issues arise regarding the content</li>
+            </ul>
+            
+            <h3>Editorial Independence</h3>
+            <p>Editorial decisions are made independently based on scholarly merit, relevance to Tamil literary studies, and adherence to publication standards. Commercial considerations do not influence editorial decisions.</p>
+            
+            <h3>Diversity and Inclusion</h3>
+            <p>We welcome submissions from scholars of all backgrounds and encourage diverse perspectives in Tamil literary research. We are committed to providing equal opportunities for publication regardless of gender, ethnicity, nationality, or institutional affiliation.</p>
+            
+            <h3>Language Policy</h3>
+            <p>We accept manuscripts in Tamil and English. Tamil submissions should use standard Tamil script and follow established orthographic conventions. English submissions should follow British English conventions.</p>
+            
+            <h3>Data Sharing</h3>
+            <p>Authors are encouraged to make their research data available when possible, following appropriate privacy and ethical guidelines. Data availability statements should be included in published articles.</p>
+            
+            <h3>Complaints and Appeals</h3>
+            <p>Authors may appeal editorial decisions or file complaints about the review process. All complaints will be investigated fairly and promptly by the editorial board.</p>
+            
+            <div class="text-center mt-3">
+                <a href="{{ url_for('contact') }}" class="btn">Contact Editorial Board</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

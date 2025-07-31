@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Manuscript Guidelines - Venbaah{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="about">
+        <h1 class="section-title tamil-text">எழுத்துப் பிரதி வழிகாட்டி</h1>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>மொழி</h3>
+                <p class="tamil-text">தமிழ் மற்றும் ஆங்கிலம்</p>
+                
+                <h3>ஆய்வுக் கட்டுரையின் அளவு</h3>
+                <p class="tamil-text">ஆய்வுக் கட்டுரை ஏ4 தாளில் 12 அளவு; 1.5 இடைவெளியுடன் 8-15 பக்கங்களுக்கு மிகாமல் லதா (தமிழ்), டைம்ஸ் நியூரோமன் (ஆங்கிலம்) எழுத்துருவில் கணினி வழி தட்டச்சு செய்து இருக்க வேண்டும்.</p>
+                
+                <h3>தலைப்பு பக்கம்</h3>
+                <p class="tamil-text">தலைப்பு பக்கம் பெயர், சுருக்கமான தலைப்பு, முகவரி, மின்னஞ்சல் முகவரி கொண்டிருக்க வேண்டும். ஆய்வுச் சுருக்கம்: 150 - 200 வார்த்தைகள் கொண்ட ஆங்கிலச் சுருக்கம் தர வேண்டும்.</p>
+                
+                <h3>ஒப்படைப்பு முறை</h3>
+                <p class="tamil-text">ஆய்வுக் கட்டுரைகளை maheswari@ijtlls.com, ijtllsetamiljournal@gmail.com என்ற மின்னஞ்சல் முகவரிக்கு அனுப்ப வேண்டும்.</p>
+            </div>
+            <div class="about-image">
+                <div class="book-cover">📝</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="featured-books">
+        <h2 class="section-title">Manuscript Guidelines</h2>
+        <div class="about-text">
+            <h3>Language</h3>
+            <p>The language of the article must be in Tamil and English (British only).</p>
+            
+            <h3>Length of the Research Paper</h3>
+            <p>The length of the paper should not exceed 8-15 pages including references and appendices. The typescript should be in type face Latha (Tamil), Times New Roman (English) with 12 type font.</p>
+            
+            <h3>Title Page</h3>
+            <p>The title page ought to include:</p>
+            <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                <li>The name(s) of the author(s)</li>
+                <li>A short and informative title</li>
+                <li>The address of the author(s)</li>
+                <li>The e-mail address of the author</li>
+            </ul>
+            
+            <h3>Abstract</h3>
+            <p>Provide an abstract of 150 to 200 words. Avoid undefined abbreviations or references.</p>
+            
+            <h3>Keywords</h3>
+            <p>Use 4 to 6 keywords for indexing purposes.</p>
+            
+            <h3>Formatting Guidelines</h3>
+            <ul style="margin-left: 2rem; margin-bottom: 1rem;">
+                <li>Use A4 paper size with 1-inch margins on all sides</li>
+                <li>Double-space the entire manuscript</li>
+                <li>Number all pages consecutively</li>
+                <li>Use 12-point Times New Roman font for English text</li>
+                <li>Use 12-point Latha font for Tamil text</li>
+                <li>Include page headers with running title</li>
+            </ul>
+            
+            <h3>Citation Style</h3>
+            <p>Follow MLA or APA citation style consistently throughout the manuscript. Include a complete bibliography at the end.</p>
+            
+            <h3>Review Process</h3>
+            <p>All submissions undergo a rigorous peer-review process. The review typically takes 4-6 weeks. Authors will be notified of the decision via email.</p>
+            
+            <h3>Submission</h3>
+            <p>The author should submit the paper via e-mail to the chief editor at <strong>maheswari@ijtlls.com</strong> or <strong>ijtllsetamiljournal@gmail.com</strong></p>
+            
+            <div class="text-center mt-3">
+                <a href="{{ url_for('contact') }}" class="btn">Submit Your Manuscript</a>
+                <a href="{{ url_for('upload_book') }}" class="btn btn-outline">Upload Book/Paper</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

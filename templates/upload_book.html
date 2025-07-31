@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Book - Venbaah{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="about">
+        <h1 class="section-title">Upload Book</h1>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Share Your Work</h3>
+                <p>Upload your literary works, research papers, or scholarly contributions to be featured in our archives. All submissions will be reviewed before publication.</p>
+                
+                <div class="upload-guidelines">
+                    <h4>Upload Guidelines:</h4>
+                    <ul>
+                        <li>Only PDF files are accepted</li>
+                        <li>Maximum file size: 16MB</li>
+                        <li>Ensure your work is original and properly formatted</li>
+                        <li>Include a clear title and author information</li>
+                        <li>Provide a brief description of your work</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="book-cover">📤</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="featured-books">
+        <h2 class="section-title">Upload Form</h2>
+        <div class="contact-form-container">
+            <form method="POST" enctype="multipart/form-data" class="contact-form">
+                {{ form.hidden_tag() }}
+                
+                <div class="form-group">
+                    {{ form.title.label(class="form-label") }}
+                    {{ form.title(class="form-input") }}
+                    {% if form.title.errors %}
+                        <div class="form-errors">
+                            {% for error in form.title.errors %}
+                                <span class="error">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    {{ form.author.label(class="form-label") }}
+                    {{ form.author(class="form-input") }}
+                    {% if form.author.errors %}
+                        <div class="form-errors">
+                            {% for error in form.author.errors %}
+                                <span class="error">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    {{ form.description.label(class="form-label") }}
+                    {{ form.description(class="form-textarea") }}
+                    {% if form.description.errors %}
+                        <div class="form-errors">
+                            {% for error in form.description.errors %}
+                                <span class="error">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    {{ form.file.label(class="form-label") }}
+                    {{ form.file(class="form-file") }}
+                    {% if form.file.errors %}
+                        <div class="form-errors">
+                            {% for error in form.file.errors %}
+                                <span class="error">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-submit") }}
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

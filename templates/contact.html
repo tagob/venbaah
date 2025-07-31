@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Venbaah{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="about">
+        <h1 class="section-title">Contact Us</h1>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Get in Touch</h3>
+                <p>We welcome your inquiries, submissions, and feedback. Please feel free to reach out to us using the form below or through our direct contact information.</p>
+                
+                <div class="contact-info">
+                    <h4>Editorial Office</h4>
+                    <p><strong>Email:</strong> maheswari@ijtlls.com</p>
+                    <p><strong>Email:</strong> ijtllsetamiljournal@gmail.com</p>
+                    <p><strong>Publication:</strong> Bi-annual with special issues</p>
+                    <p><strong>Access:</strong> Open access publication</p>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="book-cover">📧</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="featured-books">
+        <h2 class="section-title">Send us a Message</h2>
+        <div class="contact-form-container">
+            <form method="POST" class="contact-form">
+                {{ form.hidden_tag() }}
+                
+                <div class="form-group">
+                    {{ form.name.label(class="form-label") }}
+                    {{ form.name(class="form-input") }}
+                    {% if form.name.errors %}
+                        <div class="form-errors">
+                            {% for error in form.name.errors %}
+                                <span class="error">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    {{ form.email.label(class="form-label") }}
+                    {{ form.email(class="form-input") }}
+                    {% if form.email.errors %}
+                        <div class="form-errors">
+                            {% for error in form.email.errors %}
+                                <span class="error">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    {{ form.subject.label(class="form-label") }}
+                    {{ form.subject(class="form-input") }}
+                    {% if form.subject.errors %}
+                        <div class="form-errors">
+                            {% for error in form.subject.errors %}
+                                <span class="error">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    {{ form.message.label(class="form-label") }}
+                    {{ form.message(class="form-textarea") }}
+                    {% if form.message.errors %}
+                        <div class="form-errors">
+                            {% for error in form.message.errors %}
+                                <span class="error">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-submit") }}
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
