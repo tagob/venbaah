@@ -3,94 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venbaah Literary Research</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Venbaah - Tamil Literary Research Journal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="Venbaah - International Journal of Tamil Language and Literary Studies. Promoting Tamil literature and research worldwide.">
 </head>
 <body>
-    <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <!--<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full" viewBox="0 0 24 24">-->
-              <img src="./6.png" style="width:250px">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-           <!-- <span class="ml-3 text-xl">Venbaah Publications</span>-->
-          </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a class="mr-5 hover:text-gray-900" href="index.html">Home</a>
-            <a class="mr-5 hover:text-gray-900" href="manuscript.html">Manuscript Guidelines</a>
-            <a class="mr-5 hover:text-gray-900" href="policies.html">Policies</a>
-            <a class="mr-5 hover:text-gray-900" href="archives.html">Archives</a>
-            <a class="mr-5 hover:text-gray-900" href="edtorial.html">Editorial Board</a>
-            <a class="mr-5 hover:text-gray-900" href="contact.html">Contact Us</a>
-          </nav>
-        </div>
-      </header>
-      <section class="text-gray-600 body-font" style="margin-top: -3rem;">
-        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-            <img class="object-cover object-center rounded" alt="hero" src="./banner.png">
-          </div>
-          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">அனைவருக்கும் 
-              <!--<br class="hidden lg:inline-block">-->வணக்கம்
-            </h1>
-            <p class="mb-8 leading-relaxed font-small">தமிழ்மொழி செம்மொழி ஆகும். தமிழ் மொழியின் தோற்றம் இயற்கையில் பிறந்ததேயாம். அதன் அளப்பரிய தாக்கம் உலகத்தின் பல்வேறு மொழிகளிலும் காணப்படுகின்றது. உலகின் முதல் இலக்கண நூலான "தொல்காப்பியம்" தமிழில் தான் எழுதப்பட்டது. அந்நூலில் மொழியின் சிறப்பு மற்றும் பயன்பாடு விளக்கப்பட்டுள்ளது. தமிழ் இலக்கியத்தில், சங்க இலக்கியம் தமிழ்மக்களின் தொன்மையான பாரம்பரியத்தைப் பிரதிப்பலிக்கின்றது. தமிழ்மொழியின் சிறப்பு அதன் தற்போதைய நிலை மற்றும் மறுமலர்ச்சி தன்மையை அனைவரும் அறிந்து கொள்வதற்காகத் தான் "தமிழ்மொழி மற்றும் இலக்கிய பன்னாட்டு ஆய்விதழ்" உருவாக்கப்பட்டுள்ளது. ஞானத்தின் துணைக் கொண்டு தமிழ்மொழி மற்றும் இலக்கியத்தின் சிறப்பினை மென்மேலும் மெருகேற்றிட செய்வது பேராசிரியர்கள், ஆய்வாளர்கள், ஆர்வலர்கள், படைப்பாளர்கள் மற்றும் புரவலர்கள் ஆகியோரின் கடமையாகும்.</p>
-            <div class="flex justify-center">
-              <a href="contact.html"><button class="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">Contact Us</button></a>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="./6.png" alt="Venbaah Publications Logo">
+                <span class="logo-text">Venbaah</span>
+            </a>
+            
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-          </div>
+            
+            <nav id="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="manuscript.html">Manuscript Guidelines</a>
+                <a href="policies.html">Policies</a>
+                <a href="archives.html">Archives</a>
+                <a href="edtorial.html">Editorial Board</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
         </div>
-      </section>
+    </header>
 
-
-
-
-
-
-
-
-
-
-
-
-      <footer class="text-gray-600 body-font">
-        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <!--<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full" viewBox="0 0 24 24">-->
-              <img src="./6.png" style="width:250px">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-           <!-- <span class="ml-3 text-xl">Venbaah Publications</span>-->
-          </a>
-          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2023 Venbaah Publications
-            <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@RPZ Enterprises</a>
-          </p>
-          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <a class="text-gray-500">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-500">
-              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-500">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-              </svg>
-            </a>
-            <a class="ml-3 text-gray-500">
-              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-                <circle cx="4" cy="4" r="2" stroke="none"></circle>
-              </svg>
-            </a>
-          </span>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="./banner.png" alt="Venbaah Literary Journal Banner" class="hero-banner fade-in">
+            <h1 class="fade-in tamil-text">வெண்பா இலக்கிய ஆய்விதழ்</h1>
+            <p class="hero-subtitle fade-in">International Journal of Tamil Language and Literary Studies</p>
+            <div class="fade-in">
+                <a href="manuscript.html" class="btn">Submit Manuscript</a>
+                <a href="archives.html" class="btn btn-outline">Browse Archives</a>
+            </div>
         </div>
-      </footer>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="about slide-in-left">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>அனைவருக்கும் வணக்கம்</h2>
+                    <p class="tamil-text">தமிழ்மொழி செம்மொழி ஆகும். தமிழ் மொழியின் தோற்றம் இயற்கையில் பிறந்ததேயாம். அதன் அளப்பரிய தாக்கம் உலகத்தின் பல்வேறு மொழிகளிலும் காணப்படுகின்றது.</p>
+                    
+                    <h3>About Venbaah</h3>
+                    <p>Venbaah is a prestigious international journal dedicated to Tamil language and literary studies. We publish high-quality research articles, critical essays, and scholarly works that contribute to the understanding and preservation of Tamil literature and culture.</p>
+                    
+                    <p>Our mission is to provide a platform for scholars, researchers, and literature enthusiasts to share their insights and contribute to the rich tapestry of Tamil literary scholarship.</p>
+                </div>
+                <div class="about-image">
+                    <div class="book-cover">
+                        📚
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Books Section -->
+    <section class="section">
+        <div class="featured-books slide-in-right">
+            <h2 class="section-title">Featured Publications</h2>
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-cover">📖</div>
+                    <h3 class="book-title">Tamil Literary Heritage</h3>
+                    <p class="book-author">Dr. Maheswari Krishnan</p>
+                    <p class="book-description">A comprehensive study of classical Tamil literature and its influence on modern literary movements.</p>
+                    <a href="#" class="btn">Download PDF</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">📜</div>
+                    <h3 class="book-title">Contemporary Tamil Poetry</h3>
+                    <p class="book-author">Various Authors</p>
+                    <p class="book-description">An anthology of modern Tamil poetry showcasing diverse voices and themes from contemporary writers.</p>
+                    <a href="#" class="btn">View Online</a>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">🎭</div>
+                    <h3 class="book-title">Sangam Literature Analysis</h3>
+                    <p class="book-author">Editorial Board</p>
+                    <p class="book-description">Critical analysis and interpretation of Sangam period literature with modern scholarly perspectives.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="section">
+        <h2 class="section-title">Explore Venbaah</h2>
+        <div class="quick-links">
+            <div class="link-card fade-in">
+                <div class="link-card-icon">📝</div>
+                <h3>Submit Your Work</h3>
+                <p>Share your research and literary contributions with our global community of Tamil literature enthusiasts.</p>
+                <a href="manuscript.html" class="btn">Submission Guidelines</a>
+            </div>
+            
+            <div class="link-card fade-in">
+                <div class="link-card-icon">📚</div>
+                <h3>Browse Archives</h3>
+                <p>Explore our extensive collection of published articles, research papers, and literary works.</p>
+                <a href="archives.html" class="btn">View Archives</a>
+            </div>
+            
+            <div class="link-card fade-in">
+                <div class="link-card-icon">👥</div>
+                <h3>Editorial Board</h3>
+                <p>Meet our distinguished panel of editors and reviewers who maintain our publication standards.</p>
+                <a href="edtorial.html" class="btn">Meet the Team</a>
+            </div>
+            
+            <div class="link-card fade-in">
+                <div class="link-card-icon">📋</div>
+                <h3>Policies</h3>
+                <p>Learn about our publication policies, peer review process, and ethical guidelines.</p>
+                <a href="policies.html" class="btn">Read Policies</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Venbaah Publications</h3>
+                <p>International Journal of Tamil Language and Literary Studies</p>
+                <p>Promoting Tamil literature and research worldwide since 2023.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook">📘</a>
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="LinkedIn">💼</a>
+                    <a href="#" title="Instagram">📷</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="manuscript.html">Manuscript Guidelines</a></p>
+                <p><a href="policies.html">Publication Policies</a></p>
+                <p><a href="archives.html">Archives</a></p>
+                <p><a href="edtorial.html">Editorial Board</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>Email: maheswari@ijtlls.com</p>
+                <p>Email: ijtllsetamiljournal@gmail.com</p>
+                <p>Published bi-annually with special issues</p>
+                <p>Open access publication</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Venbaah Publications. All rights reserved. | Designed with ❤️ for Tamil Literature</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const nav = document.getElementById('nav-menu');
+            nav.classList.toggle('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation classes on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.book-card, .link-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
